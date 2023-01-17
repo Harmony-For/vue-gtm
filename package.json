@@ -2,27 +2,20 @@
   "name": "@gtm-support/vue2-gtm",
   "version": "2.0.0",
   "description": "Simple implementation of Google Tag Manager for Vue",
+  "main": "dist/index.js",
   "scripts": {
-    "clean": "rimraf coverage dist pnpm-lock.yaml node_modules",
-    "build": "tsc --noEmit && vite build",
+    "clean": "rm -Rf dist pnpm-lock.yaml node_modules",
+    "build": "tsc",
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "vitest",
     "prepublishOnly": "pnpm run clean && pnpm install && pnpm run build"
   },
-  "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "tsconfig.json"
   ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
   "author": {
     "name": "Christopher Quadflieg",
     "email": "chrissi92@hotmail.de",
