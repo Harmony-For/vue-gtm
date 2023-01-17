@@ -5,6 +5,7 @@
     "inlineSourceMap": false,
     "lib": ["ES2018", "DOM"],
     "rootDir": "src",
+    "outDir": "dist",
     "strict": true,
     "downlevelIteration": true,
     "declaration": true,
