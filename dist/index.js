@@ -20,7 +20,7 @@ function install(Vue, options = { id: '' }) {
     if (gtmPlugin.isInBrowserContext()) {
         // Handle vue-router if defined
         if (options.vueRouter) {
-            initVueRouterGuard(Vue, options.vueRouter, options.ignoredViews, options.trackOnNextTick);
+            initVueRouterGuard(Vue, options.vueRouter, options.ignoredViews, options.trackOnNextTick, options.vueRouterAdditionalEventData);
         }
         // Load GTM script when enabled
         if (gtmPlugin.options.enabled && gtmPlugin.options.loadScript) {
